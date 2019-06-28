@@ -227,6 +227,16 @@ public class Game {
 				dot.node = game.board.nodes[i];
 			}
 		}
+		int n = Integer.parseInt(state.substring(25, 26));
+		while (game.whitePlayer.hand.size() != n) {
+			Dot dot = game.whitePlayer.hand.iterator().next();
+			game.whitePlayer.hand.remove(dot);
+		}
+		n = Integer.parseInt(state.substring(26, 27));
+		while (game.blackPlayer.hand.size() != n) {
+			Dot dot = game.blackPlayer.hand.iterator().next();
+			game.blackPlayer.hand.remove(dot);
+		}
 		return game;
 	}
 }
