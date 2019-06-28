@@ -174,13 +174,20 @@ public class Turn {
 			} else {
 				opponentNodes = player.opponent.onboard.stream().filter(d -> !d.node.moulin()).map(d -> d.node).collect(Collectors.toList());
 			}
-			for (Node opponentNode : opponentNodes) {
+			if (opponentNodes.size() == 0) {
 				PlayerTurn t = new PlayerTurn();
 				t.on = on;
 				t.to = to;
-				t.rm = opponentNode;
-				t.dotRm = opponentNode.dot;
 				turns.add(t);
+			} else {
+				for (Node opponentNode : opponentNodes) {
+					PlayerTurn t = new PlayerTurn();
+					t.on = on;
+					t.to = to;
+					t.rm = opponentNode;
+					t.dotRm = opponentNode.dot;
+					turns.add(t);
+				}
 			}
 		} else {
 			PlayerTurn t = new PlayerTurn();
