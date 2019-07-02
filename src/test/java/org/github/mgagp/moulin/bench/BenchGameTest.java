@@ -68,7 +68,7 @@ class BenchGameTest {
 
 	@Test
 	void gameFromState1() {
-		String state = "W..WWWWBBBBBBWWWBB....WBW";
+		String state = "W..WWWWBBBBBBWWWBB....WBW00";
 		BenchGameEventHandler gameEventHandler = new BenchGameEventHandler(null);
 		Game game = Game.fromStateTextCompact(state, gameEventHandler);
 		gameEventHandler.forGame(game);
@@ -82,7 +82,7 @@ class BenchGameTest {
 
 	@Test
 	void generateTurns1() {
-		String state = "WW.WWWWBBBBBBWWWBB....WB.";
+		String state = "WW.WWWWBBBBBBWWWBB....WB.00";
 		BenchGameEventHandler gameEventHandler = new BenchGameEventHandler(null);
 		Game game = Game.fromStateTextCompact(state, gameEventHandler);
 		gameEventHandler.forGame(game);
