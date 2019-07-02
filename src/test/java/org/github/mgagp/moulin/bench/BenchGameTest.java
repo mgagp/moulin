@@ -1,4 +1,4 @@
-package org.marcg.moulin.bench;
+package org.github.mgagp.moulin.bench;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -103,5 +103,18 @@ class BenchGameTest {
 		assertEquals("PlayerTurn [on=Node [number=C], to=Node [number=H], rm=null, dotRm=null]", validMoves.get(4).toString());
 		assertEquals("PlayerTurn [on=Node [number=D], to=Node [number=K], rm=null, dotRm=null]", validMoves.get(5).toString());
 		assertEquals("PlayerTurn [on=Node [number=E], to=Node [number=N], rm=null, dotRm=null]", validMoves.get(6).toString());
+	}
+
+	@Test
+	void moveCreatesMoulinOpponentHasAllMoulins() {
+		String state = "W.W.BBB.......BW....WB.WW00";
+		BenchGameEventHandler gameEventHandler = new BenchGameEventHandler(null);
+		Game game = Game.fromStateTextCompact(state, gameEventHandler);
+		gameEventHandler.forGame(game);
+		gameEventHandler.withDisplay();
+		gameEventHandler.refreshDisplayBoard();
+		Turn turn = new Turn();
+		List<PlayerTurn> validMoves = turn.validMoves(game);
+		assertNotNull(validMoves);
 	}
 }
