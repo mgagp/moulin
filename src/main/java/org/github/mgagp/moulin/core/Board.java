@@ -1,13 +1,28 @@
 package org.github.mgagp.moulin.core;
 
+/**
+ * The board is like a square piece of wood.
+ * <p>
+ * The little spots on which player's dots may be placed are the nodes.
+ * <p>
+ * All nodes are represented as an array.
+ * <p>
+ * Each node is initialized by receiving to which other nodes it connected.
+ * 
+ * @author Marc
+ *
+ */
 public class Board {
 
 	public Node[] nodes = new Node[24];
 
 	public Board() {
+		
 		for (int i = 0; i < 24; i++) {
 			nodes[i] = new Node(i);
 		}
+		
+		// The connect method receives which node is connected to the right, down, left and up
 		nodes[0].connect(nodes, 1, 9, null, null);
 		nodes[1].connect(nodes, 2, 4, 0, null);
 		nodes[2].connect(nodes, null, 14, 1, null);

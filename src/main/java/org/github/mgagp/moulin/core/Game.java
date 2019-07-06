@@ -3,16 +3,15 @@ package org.github.mgagp.moulin.core;
 import org.github.mgagp.moulin.core.event.GameEventHandler;
 
 /**
- * The game is like the physical box for a real game: it is the container for
- * the game's board.
+ * The game is like the physical box for a real game:<br>
+ * it is the container for the game's board.
  * <p>
  * There are always a white and a black player.
  * <p>
  * The game has a state to know whose turn it is.
  * <p>
- * Lastly, the game knows the rules but not what it means in the real
- * worlds;<br>
- * This is why there is game event handler.
+ * Lastly, the game knows the rules but not what it means in term of inputs and display.<br>
+ * That is why there is a game event handler.
  * 
  * @author Marc
  *
@@ -242,12 +241,12 @@ public class Game {
 				dot.node = game.board.nodes[i];
 			}
 		}
-		int n = Integer.parseInt(state.substring(25, 26),24);
+		int n = Integer.parseInt(state.substring(25, 26), 24);
 		while (game.whitePlayer.hand.size() != n) {
 			Dot dot = game.whitePlayer.hand.iterator().next();
 			game.whitePlayer.hand.remove(dot);
 		}
-		n = Integer.parseInt(state.substring(26, 27),24);
+		n = Integer.parseInt(state.substring(26, 27), 24);
 		while (game.blackPlayer.hand.size() != n) {
 			Dot dot = game.blackPlayer.hand.iterator().next();
 			game.blackPlayer.hand.remove(dot);
