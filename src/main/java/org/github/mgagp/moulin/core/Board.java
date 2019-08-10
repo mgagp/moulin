@@ -1,5 +1,11 @@
 package org.github.mgagp.moulin.core;
 
+/**
+ * The board.
+ * 
+ * @author Marc
+ *
+ */
 public class Board {
 
 	public Node[] nodes = new Node[24];
