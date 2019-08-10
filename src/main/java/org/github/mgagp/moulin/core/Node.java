@@ -3,6 +3,11 @@ package org.github.mgagp.moulin.core;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 
+ * @author Marc
+ *
+ */
 public class Node {
 
 	int number;
