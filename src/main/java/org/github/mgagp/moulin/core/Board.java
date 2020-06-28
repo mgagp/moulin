@@ -60,24 +60,24 @@ public class Board {
 		nodes[8].connect(nodes, null, C, 7, null);
 		
 		nodes[9].connect(nodes, A, L, null, 0);
-		nodes[A].connect(nodes, 11, 18, 9, 3);
-		nodes[B].connect(nodes, null, 15, 10, 6);
+		nodes[A].connect(nodes, B, I, 9, 3);
+		nodes[B].connect(nodes, null, F, A, 6);
 		
-		nodes[C].connect(nodes, 13, 17, null, 8);
-		nodes[D].connect(nodes, 14, 20, 12, 5);
-		nodes[E].connect(nodes, null, 23, 13, 2);
+		nodes[C].connect(nodes, D, H, null, 8);
+		nodes[D].connect(nodes, E, K, C, 5);
+		nodes[E].connect(nodes, null, N, D, 2);
 		
-		nodes[F].connect(nodes, 16, null, null, 11);
-		nodes[G].connect(nodes, 17, 19, 15, null);
-		nodes[H].connect(nodes, null, null, 16, 12);
+		nodes[F].connect(nodes, G, null, null, B);
+		nodes[G].connect(nodes, H, J, F, null);
+		nodes[H].connect(nodes, null, null, G, C);
 		
-		nodes[I].connect(nodes, 19, null, null, 10);
-		nodes[J].connect(nodes, 20, 22, 18, 16);
-		nodes[K].connect(nodes, null, null, 19, 13);
+		nodes[I].connect(nodes, J, null, null, A);
+		nodes[J].connect(nodes, K, M, I, G);
+		nodes[K].connect(nodes, null, null, J, D);
 		
-		nodes[L].connect(nodes, 22, null, null, 9);
-		nodes[M].connect(nodes, 23, null, 21, 19); 
-		nodes[N].connect(nodes, null, null, 22, 14);
+		nodes[L].connect(nodes, M, null, null, 9);
+		nodes[M].connect(nodes, N, null, L, J); 
+		nodes[N].connect(nodes, null, null, M, E);
 	}
 
 }

@@ -8,7 +8,7 @@ public class Dot {
 	/** The node on which the dot is located on the board or null */
 	public Node node;
 
-	/** A dot know to which player it belongs */
+	/** A dot knows to which player it belongs */
 	public Dot(Player player) {
 		this.player = player;
 	}
