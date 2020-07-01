@@ -10,7 +10,8 @@ import org.github.mgagp.moulin.core.event.GameEventHandler;
  * <p>
  * The game has a state to know whose turn it is.
  * <p>
- * Lastly, the game knows the rules but not what it means in term of inputs and display.<br>
+ * Lastly, the game knows the rules but not what it means in term of inputs and
+ * display.<br>
  * That is why there is a game event handler.
  * 
  * @author Marc
@@ -22,7 +23,7 @@ public class Game {
 
 	public Player whitePlayer;
 
-	public BlackPlayer blackPlayer;
+	public Player blackPlayer;
 
 	public Player currentPlayer;
 
@@ -219,6 +220,40 @@ public class Game {
 		return s.toString();
 	}
 
+	/**
+	 * Instantiate a game from a compact textual format.<br>
+	 * Position:<br>
+	 * <ul>
+	 * <li>0 : Current player (W or B)
+	 * <li>1,2,3 : 1st row
+	 * <li>4,5,6 : 2nd row
+	 * <li>7,8,9 : 3rd row
+	 * <li>10,11,12 - 13,14,15 : center row
+	 * <li>16,17,18 : 3rd row from last
+	 * <li>19,20,21 : 2nd row from last
+	 * <li>22,23,24 : last row
+	 * </ul>
+	 * 25 = number of dots in white's hand.<br>
+	 * 26 = number of dots in black's hand.<p>
+	 * Each position: . if not dot, otherwise W or B.<p>
+	 * Example: "WW.WWWWBBBBBBWWWBB....WBW00"
+	 * 
+	 * <pre>
+	W--------*--------W   0--------1--------2
+	|        |        |   |        |        |
+	|   W----W----W   |   |   3----4----5   |
+	|   |    |    |   |   |   |    |    |   |
+	|   |  B-B-B  |   |   |   |  6-7-8  |   |
+	|   |  |   |  |   |   |   |  |   |  |   |
+	B---B--B   W--W---W   9---A--B   C--D---E
+	|   |  |   |  |   |   |   |  |   |  |   |
+	|   |  B-B-*  |   |   |   |  F-G-H  |   |
+	|   |    |    |   |   |   |    |    |   |
+	|   *----*----*   |   |   I----J----K   |
+	|        |        |   |        |        |
+	W--------B--------W   L--------M--------N
+	 * </pre>
+	 */
 	public static Game fromStateTextCompact(String state, GameEventHandler gameEventHandler) {
 		Game game = new Game(gameEventHandler);
 		if (state.charAt(0) == 'W') {

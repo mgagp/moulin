@@ -1,6 +1,5 @@
 package org.github.mgapg.moulin.bench;
 
-import org.github.mgagp.moulin.core.BlackPlayer;
 import org.github.mgagp.moulin.core.Dot;
 import org.github.mgagp.moulin.core.Game;
 import org.github.mgagp.moulin.core.Node;
@@ -34,7 +33,7 @@ public class BenchGameEventHandler extends AbstractBaseGameEventHandler {
 	}
 
 	@Override
-	public Player whoGoesFirst(Player whitePlayer, BlackPlayer blackPlayer) {
+	public Player whoGoesFirst(Player whitePlayer, Player blackPlayer) {
 		return moves[0].charAt(0) == 'W' ? whitePlayer : blackPlayer;
 	}
 

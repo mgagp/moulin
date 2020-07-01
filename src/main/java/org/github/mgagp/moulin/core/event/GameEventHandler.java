@@ -10,7 +10,7 @@ public interface GameEventHandler {
 	
 	void forGame(Game game);
 	
-	Player whoGoesFirst(Player whitePlayer, BlackPlayer blackPlayer);
+	Player whoGoesFirst(Player whitePlayer, Player blackPlayer);
 
 	Dot moulinWhichDotToRemove(Player otherPlayer);
 

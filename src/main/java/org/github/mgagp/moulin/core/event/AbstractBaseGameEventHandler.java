@@ -1,6 +1,5 @@
 package org.github.mgagp.moulin.core.event;
 
-import org.github.mgagp.moulin.core.BlackPlayer;
 import org.github.mgagp.moulin.core.Dot;
 import org.github.mgagp.moulin.core.Game;
 import org.github.mgagp.moulin.core.Node;
@@ -10,7 +9,7 @@ public abstract class AbstractBaseGameEventHandler extends AbstractGameEventHand
 
 	@Override
 	public void forGame(Game game) {
-		
+
 	}
 
 	@Override
@@ -24,7 +23,7 @@ public abstract class AbstractBaseGameEventHandler extends AbstractGameEventHand
 	}
 
 	@Override
-	public Player whoGoesFirst(Player whitePlayer, BlackPlayer blackPlayer) {
+	public Player whoGoesFirst(Player whitePlayer, Player blackPlayer) {
 		return whitePlayer;
 	}
 
@@ -122,7 +121,7 @@ public abstract class AbstractBaseGameEventHandler extends AbstractGameEventHand
 	public void startingGame(Player player) {
 
 	}
-	
+
 	@Override
 	public boolean end() {
 		return false;
