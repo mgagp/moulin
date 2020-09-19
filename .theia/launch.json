@@ -1,0 +1,34 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Debug (Launch) - Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-AiGame<moulin>",
+      "request": "launch",
+      "mainClass": "org.github.mgagp.moulin.ai.AiGame",
+      "projectName": "moulin"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-TextGame<moulin>",
+      "request": "launch",
+      "mainClass": "org.github.mgagp.moulin.text.TextGame",
+      "projectName": "moulin"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-BenchGame<moulin>",
+      "request": "launch",
+      "mainClass": "org.github.mgapg.moulin.bench.BenchGame",
+      "projectName": "moulin"
+    }
+  ]
+}

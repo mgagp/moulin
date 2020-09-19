@@ -68,7 +68,8 @@ public class TextGameEventHandler extends AbstractBaseGameEventHandler {
 
 	@Override
 	public Node inputPlaceForDot(Player player) {
-		int n = promptNo("Place dot on node ? ");
+        String prompt = "Place dot on node ? (" + player.hand.size() + " left) ";
+		int n = promptNo(prompt);
 		if (n == 24) {
 			player.abandon = true;
 			return null;
