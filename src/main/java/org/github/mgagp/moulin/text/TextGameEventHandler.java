@@ -17,7 +17,8 @@ public class TextGameEventHandler extends AbstractBaseGameEventHandler {
 	private TextBoardDisplayer displayer;
 
 	public TextGameEventHandler() {
-		displayer = new TextBoardDisplayer();
+        displayer = new TextBoardDisplayer();
+        System.out.println("Moulin - Text game");
 	}
 
 	@Override

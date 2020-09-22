@@ -1,6 +1,5 @@
 package org.github.mgagp.moulin.core.event;
 
-import org.github.mgagp.moulin.core.BlackPlayer;
 import org.github.mgagp.moulin.core.Dot;
 import org.github.mgagp.moulin.core.Game;
 import org.github.mgagp.moulin.core.Node;
